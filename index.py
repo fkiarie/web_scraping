@@ -19,7 +19,9 @@ for job_element in python_job_element:
     title_element = job_element.find('h2', class_="title")
     company_element = job_element.find('h3', class_="company")
     location_element = job_element.find('p', class_ = "location")
+    links_url = job_element.find_all("a")[1]['href']
     print(title_element.text.strip())
     print(company_element.text.strip())
     print(location_element.text.strip())
+    print(f'Apply here: {links_url}\n')
     print()
